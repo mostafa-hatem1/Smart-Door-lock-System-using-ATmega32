@@ -4,7 +4,7 @@
 
 This project implements a smart door control system utilizing two microcontrollers: the Human-Machine Interface ECU (HMI_ECU) and the Control ECU (Control_ECU). These two units communicate via UART to provide a secure and efficient door locking mechanism with password authentication.
 
-The system allows users to interact through an LCD and keypad to enter and manage passwords, which are securely stored in an external EEPROM. The door's locking mechanism is controlled by an H-bridge connected to a motor. Additionally, the system incorporates a PIR sensor for motion detection and a buzzer for alarms, enhancing its overall functionality.
+The system allows users to interact through an LCD and keypad to enter and manage passwords, which are securely stored in an external EEPROM. The door's locking mechanism is controlled by an H-bridge connected to a motor. Additionally, the system incorporates a PIR sensor for motion detection and a buzzer for alarms, enhancing its overall functionality. This project also feautures dynamically configurable drivers for maximum portability and reuasability
 
 ## Features
 
@@ -19,7 +19,6 @@ The system allows users to interact through an LCD and keypad to enter and manag
 
 ## Hardware Components
 
-*(Based on the requirements mentioned in the document)*
 
 * HMI_ECU (Microcontroller)
 * Control_ECU (Microcontroller)
@@ -33,8 +32,6 @@ The system allows users to interact through an LCD and keypad to enter and manag
 
 ## Software Components
 
-*(Based on the requirements mentioned in the document)*
-
 * **HMI Driver:** For interfacing with the LCD and Keypad.
 * **Keypad Driver:** To handle user input from the keypad.
 * **LCD Driver:** To display information to the user.
@@ -46,8 +43,6 @@ The system allows users to interact through an LCD and keypad to enter and manag
 * **Buzzer Driver:** To generate sound for alarms or feedback.
 
 ## Driver Requirements
-
-*(Summarized from the document)*
 
 * **Buzzer Driver:** Reuses the driver from previous projects, connected to the Control_ECU.
 * **PIR Driver:**
@@ -67,10 +62,12 @@ The system allows users to interact through an LCD and keypad to enter and manag
 
 ## Video References
 
-* How to add PIR sensor library to Proteus: [https://youtu.be/bhT90bM-Vdw](https://youtu.be/bhT90bM-Vdw)
-* Video Reference: [https://youtu.be/X5EwIRfGAAY](https://youtu.be/X5EwIRfGAAY)
-* PIR sensor library download link: [https://www.mediafire.com/file/vjffcf868ea2fbi/PIR_Sensor_lib.zip/file](https://www.mediafire.com/file/vjffcf868ea2fbi/PIR_Sensor_lib.zip/file)
 
-## Thank You
+* Video Reference:https://elsewedyedu1-my.sharepoint.com/:v:/g/personal/mh2200200_tkh_edu_eg/EeBebbgSbApIiR4kIaIW-0QBoeAwBFt0ytd4e7wjfE-msg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=FLYuIa
 
-Edges For Training Team
+
+## Acknowledgements
+
+Special thanks to Edges For Training Team for their guidance and resources.
+
+
