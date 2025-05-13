@@ -1,0 +1,15 @@
+#include "uart.h"
+#include "lcd.h"
+#include <util/delay.h>
+
+void init(){
+	LCD_init();
+}
+int main(){
+	init();
+	while(1){
+		LCD_displayString("Plz enter pass: ");
+
+	}
+    return 0;
+}

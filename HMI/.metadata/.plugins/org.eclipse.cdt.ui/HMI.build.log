@@ -1,0 +1,38 @@
+01:34:42 **** Incremental Build of configuration Debug for project HMI ****
+make all 
+Building file: ../HMI_App.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HMI_App.d" -MT"HMI_App.o" -c -o "HMI_App.o" "../HMI_App.c"
+In file included from ../HMI_App.c:8:
+../uart.h:84:7: warning: extra tokens at end of #endif directive
+In file included from ../HMI_App.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HMI_App.c
+ 
+Building target: HMI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI.map -mmcu=atmega32 -o "HMI.elf"  ./HMI_App.o ./gpio.o ./keypad.o ./lcd.o ./timer.o ./uart.o   
+Finished building target: HMI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI.elf  >"HMI.lss"
+Finished building: HMI.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HMI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12014 bytes (36.7% Full)
+(.text + .data + .bootloader)
+
+Data:        301 bytes (14.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+01:34:43 Build Finished. 0 errors, 2 warnings. (took 549ms)
+
