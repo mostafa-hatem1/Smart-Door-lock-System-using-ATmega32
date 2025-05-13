@@ -42,23 +42,52 @@ The system allows users to interact through an LCD and keypad to enter and manag
 * **PIR Driver:** To detect motion using the PIR sensor.
 * **Buzzer Driver:** To generate sound for alarms or feedback.
 
-## Driver Requirements
+## Drivers Overview
 
-* **Buzzer Driver:** Reuses the driver from previous projects, connected to the Control_ECU.
-* **PIR Driver:**
-    * Initializes the PIR sensor (`PIR_init()`).
-    * Gets the PIR sensor state (`PIR_getState()`), returns `uint8`.
-    * Connected to the Control_ECU. When motion is detected, it keeps the door held open.
-* **DC Motor Driver:**
-    * Reuses the driver from the Smart Home Project.
-    * Motor runs at maximum speed using Timer0 PWM.
-    * Connected to the Control_ECU.
-* **EEPROM Driver:**
-    * Reuses the external EEPROM driver controlled by I2C.
-    * Connected to the Control_ECU.
-* **Timer Driver:**
-    * Configurable clock source (`timer_clock`).
-    * Configurable timer mode (`timer_mode`).
+This section provides a brief description of each driver used in the project, highlighting its purpose and key functionality.
+
+### 1. GPIO Driver
+- Handles general-purpose input/output pins for both HMI_ECU and Control_ECU.
+
+### 2. UART Driver
+- Manages UART communication between HMI_ECU and Control_ECU.
+- Modified to accept a configuration structure (`UART_ConfigType`) for flexible parameter setup.
+
+### 3. LCD Driver
+- Controls a 2x16 LCD in 8-bit data mode or 4-bit data mode.
+- Used in the HMI_ECU for displaying messages and prompts.
+
+### 4. Keypad Driver
+- Interfaces with a 4x4 keypad connected to the HMI_ECU.
+- Processes user input for password entry and system navigation.
+
+### 5. I2C Driver
+- Facilitates communication with external EEPROM using the I2C protocol.
+- Modified to accept a configuration structure (`TWI_ConfigType`) for dynamic configuration.
+
+### 6. PWM Driver
+- Generates PWM signals using Timer0.
+- Used to control the motor at maximum speed through the H-bridge circuit.
+
+### 7. Timer Driver
+- Provides timing functionality using Timer0, Timer1, and Timer2 with interrupt-based callbacks.
+- Supports both normal and compare modes for various timing tasks in HMI_ECU and Control_ECU.
+
+### 8. Buzzer Driver
+- Activates the buzzer for system alerts, such as failed password attempts.
+- Connected to the Control_ECU.
+
+### 9. PIR Sensor Driver
+- Detects motion near the door via a PIR sensor.
+- Includes functions for initialization (`PIR_init`) and state retrieval (`PIR_getState`).
+
+### 10. DC Motor Driver
+- Controls the motor for door operations using Timer0 PWM.
+- Operates at maximum speed and interacts with the H-bridge circuit.
+
+### 11. EEPROM Driver
+- Manages data storage and retrieval in external EEPROM via I2C.
+- Ensures secure storage of passwords and system configuration.
 
 ## Video References
 
