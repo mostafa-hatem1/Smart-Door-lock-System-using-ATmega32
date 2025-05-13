@@ -4,7 +4,7 @@
 
 This project implements a smart door control system utilizing two microcontrollers: the Human-Machine Interface ECU (HMI_ECU) and the Control ECU (Control_ECU). These two units communicate via UART to provide a secure and efficient door locking mechanism with password authentication.
 
-The system allows users to interact through an LCD and keypad to enter and manage passwords, which are securely stored in an external EEPROM. The door's locking mechanism is controlled by an H-bridge connected to a motor. Additionally, the system incorporates a PIR sensor for motion detection and a buzzer for alarms, enhancing its overall functionality. This project also feautures dynamically configurable drivers for maximum portability and reuasability
+The system allows users to interact through an LCD and keypad to enter and manage passwords, which are securely stored in an external EEPROM. The door's locking mechanism is controlled by an H-bridge connected to a motor. Additionally, the system incorporates a PIR sensor for motion detection and a buzzer for alarms, enhancing its overall functionality.
 
 ## Features
 
@@ -16,6 +16,7 @@ The system allows users to interact through an LCD and keypad to enter and manag
 6.  **PIR Sensor Integration:** Detects motion near the door, potentially triggering actions like holding the door open.
 7.  **Buzzer for Alarms:** Provides auditory feedback for events or security alerts.
 8.  **Password-Protected Access:** Limits access to system options like door unlocking and password changes to authorized users.
+9.  **Dynamically Configurable Drivers:** provides maximum portability and re-usability for the project.
 
 ## Hardware Components
 
